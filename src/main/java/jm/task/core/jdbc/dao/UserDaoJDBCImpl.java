@@ -4,7 +4,7 @@ import java.sql.*;
 
 public class UserDaoJDBCImpl implements UserDao {
 
-    private static final Connection connection = Util.open();
+    private static final Connection connection = Util.getConnection();
 
     public void createUsersTable() throws SQLException {
         Statement statement = connection.createStatement();
